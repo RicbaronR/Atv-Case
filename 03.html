@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: CÁLCULO ENTRE DOIS NÚMEROS
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const num1 = Number(prompt(`Informe um número:`).replace(",", "."));
+    const num2 = Number(prompt(`Informe outro número:`).replace(",", "."));
+    const operacao = prompt(`Informe qual operação você deseja usar: S-soma, SUB-subtração, D-divisão ou M-multiplicação.`).toUpperCase().trim()
+    let operacaoEscolhida;
+    //PROCESSAMENTO
+    let parImpar;
+    let positivoNegativo;
+    let inteiroDecimal;
+    switch(operacao){
+        case "S":
+            operacaoEscolhida = num1+num2;
+            break;
+        case "SUB":
+            operacaoEscolhida = num1-num2;
+            break;
+        case "D":
+            operacaoEscolhida = num1/num2;
+            break;
+        case "M":
+            operacaoEscolhida = num1*num2;
+        default:
+            alert(`Informe uma operação válida!`)
+    }
+    switch(operacaoEscolhida%2){
+        case 1:
+            parImpar = `Seu número é impar.`;
+            break;
+        default:
+            parImpar = `Seu número é par.`;
+            break;
+    }
+    switch(operacaoEscolhida>=0){
+        case true:
+            positivoNegativo = `Seu número é positivo.`;
+            break;
+        default:
+            positivoNegativo = `Seu número é negativo.`;
+            break;
+    }
+    switch(operacaoEscolhida%1){
+        case 0:
+            inteiroDecimal = `Seu número é inteiro.`;
+            break;
+        default:
+            inteiroDecimal = `Seu número é decimal.`;
+            break;
+    }
+    document.write(`${parImpar} <br>${positivoNegativo} <br>${inteiroDecimal}`);
+
+    
+    //SAÍDA
+
+</script>
