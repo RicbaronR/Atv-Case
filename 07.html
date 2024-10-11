@@ -7,9 +7,59 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt(`Informe em qual hemisfério você está atualmente: Sul(S) ou Norte(N).`).toUpperCase().trim();
+    const mes = prompt(`Informe em que mês você está:`).toUpperCase().trim()
     
     //PROCESSAMENTO
+    if(hemisferio == "SUL" || hemisferio == "S"){
+        switch(mes){
+            case "JANEIRO":
+            case "FEVEREIRO":
+            case "MARÇO":
+                estacao = `Verão`;
+                break;
+            case "ABRIL":
+            case "MAIO":
+            case "JUNHO":
+                estacao = `Outono`;
+                break;
+            case "JULHO":
+            case "AGOSTO":
+            case "SETEMBRO":
+                estacao = `Inverno`;
+                break;
+            case "OUTUBRO":
+            case "NOVEMBRO":
+            case "DEZEMBRO":
+                estacao = `Primavera`;
+                break
+        }
+    }else if(hemisferio == "NORTE" || hemisferio == "N"){
+            switch(mes){
+                case "JANEIRO":
+                case "FEVEREIRO":
+                case "MARÇO":
+                    estacao = `Inverno`;
+                    break;
+                case "ABRIL":
+                case "MAIO":
+                case "JUNHO":
+                    estacao = `Primavera`;
+                    break;
+                case "JULHO":
+                case "AGOSTO":
+                case "SETEMBRO":
+                    estacao = `Verão`;
+                    break;
+                case "OUTUBRO":
+                case "NOVEMBRO":
+                case "DEZEMBRO":
+                    estacao = `Outono`;
+                    break
+    }}else{
+        alert(`Algum valor informado não está válido!`);
+    }
+    document.write(`Você está na estação: ${estacao}.`);
 
 
     //SAÍDA

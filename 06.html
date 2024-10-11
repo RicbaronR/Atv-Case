@@ -10,9 +10,30 @@
     */
 
     // ENTRADA
-
+    alert(`Indique a classificação do seu cão:
+    - cães de porte pequeno (1).
+    - cães de porte médio: (2).
+    - cães grandes: (3). `);
+    const porte = Number(prompt(`Informe a classificação do seu cão aqui:`))
+    const idadeCao = Number(prompt(`Informe a idade do seu cão:`));
     
     // PROCESSAMENTO
+    let idadeCaoReal;
+    switch(porte){
+        case 1:
+            idadeCaoReal = idadeCao * 5;
+            break;
+        case 2:
+            idadeCaoReal = idadeCao * 6;
+            break;
+        case 3:
+            idadeCaoReal = idadeCao * 7;
+            break;
+        default:
+            alert(`Informe um número entre 1 e 3!`);
+            break;
+    }
+    document.write(`Seu cão tem ${idadeCaoReal} anos de idade conforme a contagem animal.`)
 
     
     // SAÍDA

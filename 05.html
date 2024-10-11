@@ -12,9 +12,72 @@
     */
 
     //ENTRADA
+    alert(`Responda com "SIM" ou "NÃO"!`);
+    const telefonou = prompt(`Telefonou para a vítima?`).toUpperCase().trim();
+    const esteveLocal = prompt(`Esteve no local do crime?`).toUpperCase().trim();
+    const moraPerto = prompt(`Mora perto da vítima?`).toUpperCase().trim();
+    const deviaAlgo = prompt(`Devia para a vítima?`).toUpperCase().trim();
+    const trabalhouCVitima = prompt(`Já trabalhou com a vítima?`).toUpperCase().trim();
 
+    let suspeito = 0;
     
     //PROCESSAMENTO
+    switch(telefonou){
+        case "SIM":
+            suspeito ++;
+            break;
+        default:
+            suspeito = suspeito;
+    }
+    switch(esteveLocal){
+        case "SIM":
+            suspeito ++;
+            break;
+        default:
+            suspeito = suspeito;
+    }
+    switch(moraPerto){
+        case "SIM":
+            suspeito ++;
+            break;
+        default:
+            suspeito = suspeito;
+    }
+    switch(deviaAlgo){
+        case "SIM":
+            suspeito ++;
+            break;
+        default:
+            suspeito = suspeito;
+    }
+    switch(trabalhouCVitima){
+        case "SIM":
+            suspeito ++;
+            break;
+        default:
+            suspeito = suspeito;
+    }
+    let resultado;
+    switch(suspeito){
+        case 0:
+        case 1:
+            resultado = `Inocente`;
+            break;
+        case 2:
+            resultado = `Suspeita`;
+            break;
+        case 3:
+        case 4:
+            resultado = `Cúmplice`;
+            break;
+        case 5:
+            resultado = `Assassino`;
+            break;
+        default:
+            alert(`Informe respostas válidas`);
+            break;
+    }
+    document.write(`A pessoa foi classificada como ${resultado}.`)
 
 
     //SAÍDA

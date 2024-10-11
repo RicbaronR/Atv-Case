@@ -6,9 +6,17 @@
     */
 
     // ENTRADA
+    alert(`Caracteres: a    b   c
+                      d   e   f   g
+                      h   i   j   k
+                      l   m   n   o
+                      p   q   r   s
+                      t   u   v   w
+                      x   y   z.`);
     const vogal = prompt(`Informe um caractere (letra):`).toUpperCase().trim();
     
     // PROCESSAMENTO
+    let simOuNaoVogal;
     switch(vogal){
         case "A":
         case "E":
@@ -21,7 +29,7 @@
             simOuNaoVogal = `O caractere informado não é uma vogal.`;
         break;
     }
-
+    document.write(simOuNaoVogal);
     
     // SAÍDA
 
