@@ -29,15 +29,17 @@
             break;
         case "M":
             operacaoEscolhida = num1*num2;
-        default:
-            alert(`Informe uma operação válida!`)
-    }
-    switch(operacaoEscolhida%2){
-        case 1:
-            parImpar = `Seu número é impar.`;
             break;
         default:
+            alert(`Informe uma operação válida!`)
+            break;
+    }
+    switch(operacaoEscolhida%2){
+        case 0:
             parImpar = `Seu número é par.`;
+            break;
+        default:
+            parImpar = `Seu número é impar.`;
             break;
     }
     switch(operacaoEscolhida>=0){

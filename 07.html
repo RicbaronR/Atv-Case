@@ -33,7 +33,11 @@
             case "DEZEMBRO":
                 estacao = `Primavera`;
                 break
+            default:
+                alert(`Informe um mês válido!`);
+                break;
         }
+
     }else if(hemisferio == "NORTE" || hemisferio == "N"){
             switch(mes){
                 case "JANEIRO":
@@ -56,8 +60,11 @@
                 case "DEZEMBRO":
                     estacao = `Outono`;
                     break
+                default:
+                    alert(`Informe um mês válido!`);
+                    break;
     }}else{
-        alert(`Algum valor informado não está válido!`);
+        alert(`Informe um hemisfério válido!`);
     }
     document.write(`Você está na estação: ${estacao}.`);
 

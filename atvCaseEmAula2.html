@@ -13,6 +13,12 @@ Qualquer outro código Inválido
 */
 
 //Início
+alert(`Código Classificação
+1 - Alimento não-perecível
+2, 3 ou 4 - Alimento perecível
+5 ou 6 - Vestuário
+7 - Higiene pessoal
+8, 9, 10 - Utensílios domésticos`)
 var codiClassficacao = Number(prompt(`Informe o código do produto:`));
 //Meio
 let classe;
@@ -46,6 +52,7 @@ switch (codiClasse){
 
     default:
         alert(`Código inválido!! Informe um número válido`);
+        break;
 }
 document.write(`O produto é classificado como: ${classe}.`);
 
